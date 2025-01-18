@@ -1,0 +1,228 @@
+body {
+    font-family: 'Jost', sans-serif;
+    font-size: 1em;
+    margin: 0;
+    padding: 0;
+    background-color: #131313;
+    color: #fefefe;
+}
+
+/*CONTAINER STYLING*/
+.container {
+    width: 90%;
+    margin: 3% auto;
+    padding: 10px;
+    text-align: center;
+    border-style: solid;
+    border-color: #252525;
+    border-width: 2px;
+    border-radius: 15px;
+    background-image: linear-gradient(to bottom, #2c323b, #293039, #272d37, #242b36, #222934);
+    box-shadow: 0px 0px 8px 1px rgba(50, 50, 50, 0.8), 2px 2px 8px 1px rgba(0, 0, 0, 0.8);
+}
+
+/*BUTTON STYLING*/
+.button {
+    position: sticky;
+    font-size: 1.0em;
+    display: inline-block;
+    padding: 10px 10px;
+    border-radius: 5px;
+    background-color: #1f1f1f;
+    color: #fefefe;
+    text-decoration: none;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background-color: #4f1231;
+    box-shadow: 0 0 10px #4a2b52;
+}
+
+/*FONT STYLING*/
+h1 {
+    color: #FCBA03;
+    font-size: 3.0em;
+    line-height: 1.2;
+}
+
+h2 {
+    color: #FEFEFE;
+    font-size: 2.0em;
+    line-height: 1.2;
+}
+
+h3 {
+    color: #fefefe;
+    font-size: 1.0em;
+    font-weight: 600;
+    margin: 0;
+    text-shadow: 1px 1px 2px #131313;
+}
+
+h4 {
+    color: #fefefe;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 0;
+    text-shadow: 1px 1px 2px #131313;
+}
+
+h5 {
+    color: #af4261;
+    font-size: 1.2em;
+    font-weight: 400;
+    margin: 0;
+    text-shadow: 1px 1px 2px #131313;
+}
+
+h6 {
+    font-size: 2.0em;
+    font-weight: 600;
+    margin: 5px;
+    background-color: #f3ec78;
+    background-image: linear-gradient(45deg, #f3ec78, #af4261);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+p {
+    color: #fefefe;
+    text-shadow: 1px 1px 2px #131313;
+}
+
+/*STYLING FOR TEXT AREA FIELD*/
+textarea {
+    font-size: 1.4em;
+    width: 95%;
+    height: 250px;
+    padding: 5px;
+    color: #fefefe;
+    background-color: #252525;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #fefefe;
+    border-radius: 5px;
+    overflow: auto;
+    background-image: linear-gradient(to bottom, #272b34, #272b34, #262b34, #262a34, #262a34);
+    box-shadow: 0px 0px 8px 1px rgba(161, 161, 201, 0.8), 2px 2px 8px 1px rgba(0, 0, 0, 0.8);
+}
+
+/* BASIC STYLING FOR CHECKBOXES */
+input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin-right: 15px;
+    margin-left: -3px;
+    font-size: 2rem;
+    padding: 0.1rem;
+    border: 0.25rem solid #af4261;
+    border-radius: 0.5rem;
+}
+
+input[type="checkbox"]::before {
+    content: "";
+    width: 1.4rem;
+    height: 1.4rem;
+    clip-path: polygon(20% 0%, 0% 20%, 30% 50%, 0% 80%, 20% 100%, 50% 70%, 80% 100%, 100% 80%, 70% 50%, 100% 20%, 80% 0%, 50% 30%);
+    transform: scale(0);
+    background-color: #fefefe;
+}
+
+input[type="checkbox"]:checked::before {
+    transform: scale(0.8);
+}
+
+input[type="checkbox"]:hover {
+    color: black;
+}
+
+/* UI styling - Seperator Bar */
+.horisontal-seperator {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 1px;
+    width: 100%;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    background: #fefefe;
+    border: 1px solid #fefefe;
+    border-radius: 50%;
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    width: 85%;
+    height: 95%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #232323;          
+    background-image: linear-gradient(to bottom, #272b34, #272b34, #262b34, #262a34, #262a34);
+    background-size: cover;
+    color: #fefefe;
+    border: 2px solid #fefefe;
+    border-radius: 15px;
+    z-index: 1000;
+}
+
+.modal-content {
+    text-align: left;
+    line-height: 1.6;
+    text-shadow: 1px 1px 2px #131313;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 999;
+}
+
+/* Styling for close icon */
+.close-modal {
+    position: absolute;
+    top: -10px;
+    right: 5px;
+    font-size: 3.5em;
+    cursor: pointer;
+    color: #af4261;
+    z-index: 999;
+}
+
+.close-modal:hover {
+    color: #fefefe;
+    text-shadow: 0 0 10px #4a2b52;
+}
+
+/* Item styling for the notes */
+.notes-content {
+    overflow-y: auto;
+    max-height: 88vh;
+}
+
+.note-item {
+    clear: both;
+    padding-left: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding-left: 10px; 
+}

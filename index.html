@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note Companion</title>
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h6>Note Companion</h6>
+        <p><h5>Capture and summarize your day.</h5></p>
+        <textarea id="noteInput" placeholder="Write your note here..."></textarea><br>
+        <button onclick="saveNote()" class="button">Save Note</button>
+        <a href="#" class="button" onclick="viewNotes()">View Notes</a>
+        <button onclick="openCreditsModal()" class="button">[ About ]</button>
+    </div>
+
+    <div class="modal-overlay" id="notesOverlay"></div>
+    <div class="modal" id="notesModal">
+        <span class="close-modal" onclick="closeNotesModal()">&times;</span>
+        <div class="modal-content">
+            <h5>YOUR SAVED NOTES:</h5>
+            <div class="horisontal-seperator"></div>
+            <div style="color: #FCBA03;" id="notesContent" class="notes-content"></div>
+        </div>
+
+        <button onclick="deleteSelectedNotes()" class="button">Delete Selected Notes</button>
+        <button onclick="clearAllNotes()" class="button">Delete All Notes</button>
+    </div>
+
+    <div class="modal-overlay" id="overlay"></div>
+    <div class="modal" style="height: 55%;" id="creditsModal">
+        <div class="modal-content">
+            <h1 style="text-align: center;"><span>NOTE</span> <span>COMPANION</span></h1>
+            <h2 style="text-align: center;">Credits:
+                Raymond H.Ingebretsen<br>
+                &copy; Tassel / LaBaN '2024<br>
+            </h2>
+            <span class="close-modal" onclick="closeCreditsModal()">&times;</span>
+        </div>
+    </div>
+
+    <!-- Main Javascript -->
+    <script src="./js/script.js"></script>
+
+</body>
+</html>
